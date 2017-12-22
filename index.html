@@ -42,7 +42,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="" class="js-avatar">
+			<img src="/img/ac.jpg" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">zhuyu</a></h1>
@@ -100,7 +100,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="" class="js-avatar">
+				<img src="/img/ac.jpg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">zhuyu</h1>
@@ -151,27 +151,76 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-postName" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-npm-、webpack、gulp" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/21/postName/">postName</a>
+      <a class="article-title" href="/2017/12/22/npm-、webpack、gulp/">npm-、webpack、gulp</a>
     </h1>
   
 
         
-        <a href="/2017/12/21/postName/" class="archive-article-date">
-  	<time datetime="2017-12-21T08:21:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-21</time>
+        <a href="/2017/12/22/npm-、webpack、gulp/" class="archive-article-date">
+  	<time datetime="2017-12-22T09:23:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-22</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h3 id="package-json-有什么作用？"><a href="#package-json-有什么作用？" class="headerlink" title="package.json 有什么作用？"></a>package.json 有什么作用？</h3><p>每个项目的根目录下面，一般都有一个package.json文件，定义了这个项目所需要的各种模块，以及项目的配置信息（比如名称、版本、许可证等元数据）。</p>
+<p>可通过<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm init</span><br></pre></td></tr></table></figure></p>
+<p>来创建</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;name&quot;: &quot;someone&quot;,                                               //项目名称</span><br><span class="line">  &quot;version&quot;: &quot;1.0.0&quot;,                                              //版本号</span><br><span class="line">  &quot;description&quot;: &quot;&quot;,                                               //描述</span><br><span class="line">  &quot;main&quot;: &quot;index.js&quot;,                                              //加载的入口文件</span><br><span class="line">  &quot;scripts&quot;: &#123;</span><br><span class="line">    &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;          //运行脚本命令的npm命令行缩写，通过npm test 执行</span><br><span class="line">  &#125;,</span><br><span class="line">  </span><br><span class="line">  &quot;dependencies&quot;: &#123;                                                //项目运行所依赖的模块</span><br><span class="line">	&quot;express&quot;: &quot;latest&quot;,</span><br><span class="line">	&quot;MD5&quot;: &quot;~1.2.0&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  </span><br><span class="line">  &quot;devDependencies&quot;: &#123;                                             //项目开发所需要的模块。</span><br><span class="line">	&quot;bower&quot;: &quot;~1.2.8&quot;,</span><br><span class="line">	&quot;grunt&quot;: &quot;~0.4.1&quot;,</span><br><span class="line">	&quot;browserify&quot;: &quot;2.36.1&quot;,</span><br><span class="line">	&quot;grunt-browserify&quot;: &quot;~1.3.0&quot;,</span><br><span class="line">  &#125;,</span><br><span class="line">    </span><br><span class="line">  &quot;author&quot;: &quot;&quot;,                                                    //作者名 </span><br><span class="line">  &quot;license&quot;: &quot;ISC&quot;                                                 //许可证</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>有了package.json文件，直接使用npm install命令，就会在当前目录中安装所需要的模块。</p>
+<hr>
+<h3 id="npm-install-–save-app-与-npm-install-–save-dev-app有什么区别"><a href="#npm-install-–save-app-与-npm-install-–save-dev-app有什么区别" class="headerlink" title="npm install –save app 与 npm install –save-dev app有什么区别?"></a>npm install –save app 与 npm install –save-dev app有什么区别?</h3><ul>
+<li>–save参数自动把模块和版本号添加到dependencies部分写入dependencies属性，–save-dev表示自动把模块和版本号添加到devdependencies属性。   </li>
+<li>前者是项目运行所依赖的模块，后者是项目开发所需要的模块。     </li>
+<li>正常使用npm install时，会下载dependencies和devDependencies中的模块，当使用npm install–production或者注明NODE_ENV变量值为production时，只会下载dependencies中的模块。</li>
+</ul>
+<hr>
+<h3 id="node-modules的查找路径是怎样的"><a href="#node-modules的查找路径是怎样的" class="headerlink" title="node_modules的查找路径是怎样的?"></a>node_modules的查找路径是怎样的?</h3><p>当前目录、上级目录，一层层往上查找。。。。最终到根目录</p>
+<hr>
+<h3 id="npm3与-npm2相比有什么改进？yarn和-npm-相比有什么优势"><a href="#npm3与-npm2相比有什么改进？yarn和-npm-相比有什么优势" class="headerlink" title="npm3与 npm2相比有什么改进？yarn和 npm 相比有什么优势?"></a>npm3与 npm2相比有什么改进？yarn和 npm 相比有什么优势?</h3><p>npm2 安装依赖的时候比较简单直接，直接按照包依赖的树形结构下载填充本地目录结构。太深的目录树结构会严重影响效率，甚至在 Windows 下可能会超出系统路径限制的长度。另外，在 Windows 有删 node_modules 目录经历的可能都经历过漫长的等待。   </p>
+<p>npm3 安装时会按照 package.json 里依赖的顺序依次解析，遇到新的包就把它放在第一级目录，后面如果遇到一级目录已经存在的包，会先判断版本，如果版本一样则忽略，否则会按照 npm2 的方式依次挂在依赖包目录下。这种构建方式会几乎把所有包放在一级目录下，很大程度上提升了效率以及节省了部分磁盘空间。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/6576557-ecbb789cb4a19a83.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image">   </p>
+<p>yarn和npm的比较：</p>
+<ol>
+<li>无论 npm 还是 Yarn 在执行包的安装时，都会执行一系列任务。npm 是按照队列执行每个 package，也就是说必须要等到当前 package 成功安装之后，才能继续后面的安装。而 Yarn 是同步执行所有任务，提高了性能。</li>
+</ol>
+<ol>
+<li><p>npm 的输出信息比较冗长。在执行 npm install <package> 的时候，命令行里会不断地打印出所有被安装上的依赖。相比之下，Yarn 简洁太多：默认情况下，结合了 emoji （Windows 上 emoji 不可见）直观且直接地打印出必要的信息，也提供了一些命令供开发者查询额外的安装信息。</package></p>
+</li>
+<li><p>npm 和 Yarn 都是通过 package.json 记录项目需要拉取的依赖模块，不过在使用时，往往 package.json 中模块的版本号不太会写得非常确切，通常是定个版本范围。为了防止拉取到不同的版本，Yarn 有一个锁定文件 (lock file) 记录了被确切安装上的模块的版本号。每次只要新增了一个模块，Yarn 就会创建（或更新）yarn.lock 这个文件。这么做就保证了，每一次拉取同一个项目依赖时，使用的都是一样的模块版本。而 npm 要通过 shrinkwrap 命令生成 npm-shrinkwrap.json 文件，只有当这个文件存在的时候，packages 版本信息才会被记录和更新。</p>
+</li>
+</ol>
+<p>yarn 构建步骤如下：</p>
+<ol>
+<li>Resolution: 向仓库请求依赖关系</li>
+<li>Fetching: 看看本地缓存了没有，否则把包拉到缓存里</li>
+<li>Linking: 直接全部从缓存里构建好目录树放到 node_modules 里</li>
+</ol>
+<hr>
+<h3 id="webpack是什么？和其他同类型工具比有什么优势？"><a href="#webpack是什么？和其他同类型工具比有什么优势？" class="headerlink" title="webpack是什么？和其他同类型工具比有什么优势？"></a>webpack是什么？和其他同类型工具比有什么优势？</h3><p>webpack 是一个现代 JavaScript 应用程序的模块打包器(module bundler)。当 webpack 处理应用程序时，它会递归地构建一个依赖关系图(dependency graph)，其中包含应用程序需要的每个模块，然后将所有这些模块打包成少量的 bundle - 通常只有一个，由浏览器加载。</p>
+<ol>
+<li>webpack 支持简单的不含变量的表达式</li>
+<li>webpack 提供了代码拆分的方案，可以将应用代码拆分为多个块（chunk），每个块包含一个或多个模块，块可以按需被异步加载。</li>
+<li>webpack 提供了模块热替换的能力，它使得在修改完某一模块后无须刷新页面，即可动态将受影响的模块替换为新的模块，在后续的执行中使用新的模块逻辑。</li>
+</ol>
+<hr>
+<h3 id="npm-script是什么？如何使用？"><a href="#npm-script是什么？如何使用？" class="headerlink" title="npm script是什么？如何使用？"></a>npm script是什么？如何使用？</h3><p>npm 允许在package.json文件里面，使用scripts字段定义脚本命令。</p>
+<p>scripts字段是一个对象。它的每一个属性，对应一段脚本。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;name&quot;: &quot;someone&quot;,                                               //项目名称</span><br><span class="line">  &quot;version&quot;: &quot;1.0.0&quot;,                                              //版本号</span><br><span class="line">  &quot;description&quot;: &quot;&quot;,                                               //描述</span><br><span class="line">  &quot;main&quot;: &quot;index.js&quot;,                                              //加载的入口文件</span><br><span class="line">   </span><br><span class="line">  &quot;scripts&quot;: &#123;</span><br><span class="line">    &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;,          //运行脚本命令的npm命令行缩写，通过npm test 执行no test specified</span><br><span class="line">    “bulid” &quot;mkdir some&quot;                                           //自定义命令需要通过npm run bulid来执行，创建some文件夹                                                                </span><br><span class="line">  &#125;,</span><br><span class="line"> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><a href="http://www.ruanyifeng.com/blog/2016/10/npm_scripts.html" target="_blank" rel="noopener">npm scripts 使用指南</a></p>
+<hr>
+<h3 id="gulp是什么？使用-gulp-实现图片压缩、CSS-压缩合并、JS-压缩合并"><a href="#gulp是什么？使用-gulp-实现图片压缩、CSS-压缩合并、JS-压缩合并" class="headerlink" title="gulp是什么？使用 gulp 实现图片压缩、CSS 压缩合并、JS 压缩合并"></a>gulp是什么？使用 gulp 实现图片压缩、CSS 压缩合并、JS 压缩合并</h3><p>gulp是基于Nodejs的自动任务运行器， 它能自动化地完成 javascript/coffee/sass/less/html/image/css 等文件的的测试、检查、合并、压缩、格式化、浏览器自动刷新、部署文件生成，并监听文件在改动后重复指定的这些步骤。</p>
+<p>gulpfile.js<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">var gulp = require(&apos;gulp&apos;)                         //导入gulp</span><br><span class="line">var cssnano = require(&apos;gulp-cssnano&apos;)              //导入css压缩包             </span><br><span class="line">var concat = require(&apos;gulp-concat&apos;)                //导入文件合并包</span><br><span class="line">var jsmin = require(&apos;gulp-uglify&apos;)                 //导入JS压缩包</span><br><span class="line">var imgmin = require(&apos;gulp-imagemin&apos;)              //导入图片压缩包</span><br><span class="line"></span><br><span class="line">gulp.task(&apos;build:img&apos;,function()&#123;                  //图片压缩任务</span><br><span class="line">	gulp.src(&apos;./scr/img/*.jpg&apos;)</span><br><span class="line">		.pipe(imgmin())</span><br><span class="line">		.pipe(gulp.dest(&apos;./dist/img/&apos;))</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">gulp.task(&apos;build:css&apos;,function()&#123;                  //css合并压缩任务</span><br><span class="line">	gulp.src(&apos;./scr/css/*.css&apos;)</span><br><span class="line">		.pipe(concat(&apos;all.css&apos;))</span><br><span class="line">		.pipe(cssnano())</span><br><span class="line">		.pipe(gulp.dest(&apos;./dist/css/&apos;))</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">gulp.task(&apos;build:js&apos;,function()&#123;                   //js合并压缩任务</span><br><span class="line">	gulp.src(&apos;./scr/js/*.js&apos;)</span><br><span class="line">		.pipe(concat(&apos;all.js&apos;))	</span><br><span class="line">		.pipe(jsmin())</span><br><span class="line">		.pipe(gulp.dest(&apos;./dist/js/&apos;))</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">gulp.task(&apos;default&apos;,[&apos;build:img&apos;,&apos;build:css&apos;,&apos;build:js&apos;])</span><br></pre></td></tr></table></figure></p>
+<hr>
+
       
 
       
@@ -183,7 +232,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/12/21/postName/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/12/22/npm-、webpack、gulp/">展开全文 >></a>
         </p>
       
 
@@ -213,35 +262,29 @@
 
 
   
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Ubuntu更新nodejs-和-npm" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/21/hello-world/">Hello World</a>
+      <a class="article-title" href="/2017/12/22/Ubuntu更新nodejs-和-npm/">Ubuntu更新nodejs-和-npm</a>
     </h1>
   
 
         
-        <a href="/2017/12/21/hello-world/" class="archive-article-date">
-  	<time datetime="2017-12-21T08:12:26.575Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-21</time>
+        <a href="/2017/12/22/Ubuntu更新nodejs-和-npm/" class="archive-article-date">
+  	<time datetime="2017-12-22T09:22:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-22</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <p>更新nodejs<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo npm cache clean -f</span><br><span class="line">sudo npm install -g n    // 安装n</span><br><span class="line">sudo n stable    //安装当前稳定版    </span><br><span class="line">sudo ln -sf /usr/local/n/versions/node/&lt;VERSION&gt;/bin/node /usr/bin/nodejs  //&lt;VERSION&gt;替换成版本号，具体内容到相应目录查询</span><br></pre></td></tr></table></figure></p>
+<p>第三步可以替换成下面命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo n latest //这是安装最新版nodejs</span><br></pre></td></tr></table></figure></p>
+<p>更新npm<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm install npm@latest -g</span><br></pre></td></tr></table></figure></p>
 
       
 
@@ -254,7 +297,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/12/21/hello-world/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/12/22/Ubuntu更新nodejs-和-npm/">展开全文 >></a>
         </p>
       
 
@@ -425,27 +468,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
         <ul class="search-ul">
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
+              <a href="https://github.com/zhuyutrisla" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>我的Github</a>
             </li>
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
+              <a href="http://www.jianshu.com/u/86f7e67e4efa" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>我的简书</a>
             </li>
           
         </ul>
@@ -456,7 +483,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">一名前端工程师</div>
   	  	
     	</section>
     
